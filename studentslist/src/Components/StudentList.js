@@ -47,13 +47,13 @@ const StudentList = () => {
         if (data && data.data) {
             setStudents(data.data);
             // Example filtering logic based on the available attributes
-            const enquiries = data.data.filter(item => item.attributes.createdAt && item.attributes.createdAt > '2024-01-01'); // Sample filter for enquiries
-            const followUpEnquiries = data.data.filter(item => item.attributes.updatedAt && item.attributes.updatedAt > '2024-01-01'); // Sample filter for follow-up
-            const enrollmentApprovals = data.data.filter(item => !item.attributes.grade); // Assuming no grade means approval pending
-            const feeRemainders = data.data.filter(item => item.attributes.city === 'Bangalore'); // Example filter, replace with real condition
-            const upcomingFeeAlerts = data.data.filter(item => new Date(item.attributes.dob).getFullYear() === 2011); // Sample for alert based on DOB
-            const assignmentSubmissions = data.data.filter(item => item.attributes.school === null); // Replace with real condition
-            const promoteNewCertificates = data.data.filter(item => item.attributes.bloodGroup === null); // Example condition
+            const enquiries = data.data.filter(item => item.attributes.createdAt && item.attributes.createdAt > '2024-01-01'); 
+            const followUpEnquiries = data.data.filter(item => item.attributes.updatedAt && item.attributes.updatedAt > '2024-01-01'); 
+            const enrollmentApprovals = data.data.filter(item => !item.attributes.grade); 
+            const feeRemainders = data.data.filter(item => item.attributes.city === 'Bangalore');
+            const upcomingFeeAlerts = data.data.filter(item => new Date(item.attributes.dob).getFullYear() === 2011); 
+            const assignmentSubmissions = data.data.filter(item => item.attributes.school === null); 
+            const promoteNewCertificates = data.data.filter(item => item.attributes.bloodGroup === null); 
 
             // Update the state with the counts
             setEnquiriesCount(enquiries.length);
