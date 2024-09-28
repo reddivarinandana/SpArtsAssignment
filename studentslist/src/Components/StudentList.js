@@ -10,6 +10,7 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
+import DashBoard from "./DashBoard";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -174,12 +175,13 @@ const StudentList = () => {
                             <button className="bg-[#F46D21] text-white text-center py-2 px-4 rounded ml-4">
                                 Collect Fees
                             </button>
-                        <div>
+                        {/* <div>
                             <p className="text-left mt-2">MONTH-ON-MONTH GROWTH</p>
                         <div className="w-full max-w-2xl mt-4">
                             <Bar data={chartData} options={{ responsive: true }} />
                         </div>
-                        </div>
+                        </div> */}
+                        <DashBoard />
                     </div>
                     <div>
                     <div className="border border-gray-300 rounded-lg p-4 mt-4 w-full max-w-md text-left">
